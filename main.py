@@ -4,14 +4,14 @@
 #Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
 #HINT 1: https://www.google.com/search?q=how+to+round+number+to+2+decimal+places+python&oq=how+to+round+number+to+2+decimal
 #HINT 2: https://www.kite.com/python/answers/how-to-limit-a-float-to-two-decimal-places-in-python
-print("Welcome to the tip calculator")
-ToPay=float(input("What was the total bill?\n€")) #500
-peopleCount=(int(input("Between how many people should the bill be split?\n"))) #5
-tipPercentage=(float(input("How many percent would you like to tip?\n"))/100)  #12%
+print("Welcome to Irina's tip calculator")
+ToPay=float(input("What is the total bill?\n€"))
+peopleCount=(int(input("How many people are splitting the bill?\n")))
+tipPercentage=(float(input("How large of a tip would you like to leave? 10? 12? 15? or 20? ...Or just give your number: \n"))/100)
 payPerPerson=ToPay/peopleCount
 totalBill=ToPay+ToPay*tipPercentage
 totalBillPerPerson=payPerPerson + payPerPerson * tipPercentage
 TotalPerPerson="{:.2f}".format(totalBillPerPerson)
 TotalToPay="{:.2f}".format(totalBill)
 print(f"Total to pay with a tip is {totalBill}")
-print(f"The Total amount with the tip to pay by each person is {TotalPerPerson}€")
+print(f"Each person should pay: {TotalPerPerson}€")
